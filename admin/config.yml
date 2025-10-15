@@ -1,9 +1,19 @@
 backend:
-  name: github
-  repo: agringevo-ai/agringevo-site
+  name: git-gateway
   branch: main
 
-media_folder: "uploads"
-public_folder: "/uploads"
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
 
-site_url: "https://agringevo.netlify.app"
+collections:
+  - name: "homepage"
+    label: "Homepage"
+    files:
+      - file: "index.html"
+        label: "Contenuti homepage (HTML grezzo)"
+        name: "index"
+        fields:
+          - label: "File HTML"
+            name: "body"
+            widget: "code"
+            default_language: "html"
