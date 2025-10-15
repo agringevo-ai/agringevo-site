@@ -1,19 +1,22 @@
 backend:
   name: git-gateway
   branch: main
+  identity_url: "https://agringevo.netlify.app/.netlify/identity"
+  gateway_url: "https://agringevo.netlify.app/.netlify/git"
+  site_domain: "agringevo.netlify.app"
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
+locale: "it"
+
 collections:
-  - name: "homepage"
-    label: "Homepage"
+  - name: "contenuti"
+    label: "Contenuti del sito"
     files:
       - file: "index.html"
-        label: "Contenuti homepage (HTML grezzo)"
-        name: "index"
+        label: "Home Page"
+        name: "home"
         fields:
-          - label: "File HTML"
-            name: "body"
-            widget: "code"
-            default_language: "html"
+          - { label: "Titolo principale", name: "title", widget: "string" }
+          - { label: "Descrizione", name: "description", widget: "text" }
