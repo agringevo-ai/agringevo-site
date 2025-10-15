@@ -1,0 +1,9 @@
+backend:
+  name: github
+  repo: agringevo-ai/agringevo-site
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+site_url: "https://agringevo.netlify.app"
