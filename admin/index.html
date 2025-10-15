@@ -6,12 +6,12 @@
     <meta name="robots" content="noindex" />
     <!-- Widget Identity per login -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <!-- Decap CMS (nuovo nome di Netlify CMS) -->
+    <!-- Decap CMS (successore di Netlify CMS) -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   </head>
   <body>
     <script>
-      // Dopo il login rimanda di nuovo su /admin
+      // Se non loggato, dopo il login ricarica /admin
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", (user) => {
           if (!user) {
