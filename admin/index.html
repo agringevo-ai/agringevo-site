@@ -4,14 +4,17 @@
     <meta charset="utf-8" />
     <title>Agringevo CMS</title>
     <meta name="robots" content="noindex" />
-    <!-- Widget Identity per login -->
+    <!-- Stili e script Decap CMS -->
+    <link rel="stylesheet" href="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.css">
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <!-- Decap CMS (successore di Netlify CMS) -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   </head>
   <body>
+    <!-- Contenitore richiesto dal CMS -->
+    <div id="nc-root"></div>
+
     <script>
-      // Se non loggato, dopo il login ricarica /admin
+      // Dopo login rimanda su /admin
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", (user) => {
           if (!user) {
